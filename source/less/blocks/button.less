@@ -1,0 +1,87 @@
+.button {
+  .bold-basic();
+  display: inline-block;
+  padding: 10px 23px;
+  border: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.button--login {
+  color: @lid-color;
+  background: @light;
+  padding: 0;
+}
+
+.button--register {
+  color: @light;
+  background-color: @lid-color;
+}
+
+.button--basic {
+  color: @light;
+  background-color: @bright;
+}
+
+.button-toggle {
+  display: none;
+  @media (max-width: @tablet-width) {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: @lid-color;
+    border-radius: 5px;
+  }
+}
+
+.button-toggle__burger {
+  margin-top: 11px;
+  margin-left: 5px;
+}
+
+.button-toggle__burger,
+.button-toggle__burger::before,
+.button-toggle__burger::after {
+  position: absolute;
+  background-color: @light;
+  width: 15px;
+  height: 3px;
+  border-radius: 7px;
+}
+
+.button-toggle__burger::before,
+.button-toggle__burger::after {
+  content: '';
+  display: block;
+}
+
+.button-toggle__burger::before {
+  transform: translateY(-5px);
+}
+
+.button-toggle__burger::after {
+  transform: translateY(5px);
+}
+
+.button--active span {
+  height: 0;
+}
+
+.button--active span::before {
+  transform: rotate(45deg);
+}
+
+.button--active span::after{
+  transform: rotate(-45deg);
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  border-radius: 5px;
+}
+

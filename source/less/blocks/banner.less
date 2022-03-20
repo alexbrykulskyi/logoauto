@@ -1,0 +1,61 @@
+.main-page__banner {
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  margin-bottom: 60px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
+}
+
+.banner__wrapper-left {
+  margin-bottom: 55px;
+  @media (min-width: @tablet-width) {
+    width: 40%;
+    margin-bottom: 0;
+  }
+}
+
+.banner__wrapper-right {
+  background: url("../img/banner-ellipse-mobile.svg") 80% 50% no-repeat;
+  @media (min-width: @tablet-width) {
+    width: 60%;
+    background: url("../img/banner-ellipse.svg") 85% 50% no-repeat;
+  }
+}
+
+.banner__title {
+  .bold-secondary();
+  color: @text-color-secondary;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 35px;
+  line-height: 42px;
+  text-align: left;
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 1px;
+    margin-top: 95px;
+    margin-bottom: 40px;
+  }
+}
+
+.banner__intro {
+  margin-top: 75px;
+}
+
+.banner__car-picture {
+  margin-left: -40px;
+  width: 400px;
+  @media (min-width: @tablet-width) {
+    width: 755px;
+  }
+}
+
+.title-decor {
+  color: @lid-color;
+}

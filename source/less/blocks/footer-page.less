@@ -1,0 +1,26 @@
+.page__footer {
+  min-width: 1280px;
+  background-color: @bright;
+  @media (max-width: @tablet-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    min-width: 360px;
+  }
+}
+
+.footer__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+  }
+}
+
+.footer__logo {
+  @media (max-width: @tablet-width) {
+  margin: 0;
+  margin-bottom: 30px;
+  }
+}
