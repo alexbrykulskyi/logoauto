@@ -14,17 +14,9 @@ $(document).ready(function() {
 
 $(window).on('load resize', function() {
   if ($(window).width() < 768) {
-    $('.slider-list').slick({
+    $('.slider-competitions').slick({
 
     });
-  } else {
-    $('.slider-list').slick("unslick");
-  }
-});
-
-
-$(window).on('load resize', function() {
-  if ($(window).width() < 768) {
     $('.slider-winners').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -33,6 +25,7 @@ $(window).on('load resize', function() {
       arrows: false
     });
   } else {
+    $('.slider-competitions').slick("unslick");
     $('.slider-winners').slick("unslick");
   }
 });
