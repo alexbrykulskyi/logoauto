@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LOGOAUTO</title>
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
@@ -28,7 +29,7 @@
     </ul>
     <div class="buttons-wrapper mobile-deactive">
       <a class="button button-first button--login" href="#">Logian</a>
-      <a class="button button-second button--register" href="#">Register</a>
+      <a data-hover="Register" class="button button-second button--register" href="#">Register</a>
     </div>
   </div>
   </header>
@@ -58,14 +59,14 @@
   </div>
 </header>
 
- <main class="main-page">
+<main class="main-page">
 
   <div class="main-page__banner banner wrapper">
     <div class="banner__wrapper-left">
       <h2 class="banner__title">
         Could you be our <span class="title-decor"><br>next winner?</span>
       </h2>
-      <a class="banner__button button button--basic">
+      <a data-hover="Enter now" class="button button-lid button--basic">
         Enter now
       </a>
     </div>
@@ -77,53 +78,53 @@
   </div>
 
   <section class="competitions wrapper">
-    <h3 id="link-1" class="competitions__title">Latest Competitions</h3>
-    <ul class="competitions__list item-list">
-      <li class="item-list__item card-item">
-        <img src="img/competitions-1.jpg" alt="" class="item-list__picture">
+    <h3 class="competitions__title">Latest Competitions</h3>
+    <ul class="item-list competitions__list slider-list slider--arrows">
+      <li class="item-list__card-item competitions__item">
+        <img src="img/competitions-1.jpg" alt="" class="competitions__picture">
         <div class="item-list__wrap">
-          <h4 class="item-list__title">2020 Audi S5 Coupe</h4>
-          <b class="item-list__price">$19.99</b>
-          <s class="item-list__old-price">54.68</s>
-          <p class="item-list__text">5878 tickets remaining</p>
-          <a class="item-list__link">
-            <img class="item-list__arrow-icon" src="img/arrow-right-white.svg" alt="">
+          <h4 class="item-list__title competitions__item-list-title">2020 Audi S5 Coupe</h4>
+          <b class="competitions__price">$19.99</b>
+          <s class="competitions__old-price">54.68</s>
+          <p class="item-list__text competitions__item-list-text">5878 tickets remaining</p>
+          <a class="competitions__link" href="#">
+            <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
           </a>
         </div>
       </li>
-      <li class="item-list__item card-item">
-        <img src="img/competitions-2.jpg" alt="" class="item-list__picture">
+      <li class="item-list__card-item competitions__item">
+        <img src="img/competitions-2.jpg" alt="" class="competitions__picture">
         <div class="item-list__wrap">
-          <h4 class="item-list__title">2016 Ford Mustang GT</h4>
-          <b class="item-list__price">$7.99</b>
-          <s class="item-list__old-price">$9.68</s>
-          <p class="item-list__text">$3290 tickets remaining</p>
-          <a class="item-list__link">
-            <img class="item-list__arrow-icon" src="img/arrow-right-white.svg" alt="">
+          <h4 class="item-list__title competitions__item-list-title">2016 Ford Mustang GT</h4>
+          <b class="competitions__price">$7.99</b>
+          <s class="competitions__old-price">$9.68</s>
+          <p class="item-list__text competitions__item-list-text">$3290 tickets remaining</p>
+          <a class="competitions__link" href="#">
+            <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
           </a>
         </div>
       </li>
-      <li class="item-list__item card-item">
-        <img src="img/competitions-3.jpg" alt="" class="item-list__picture">
+      <li class="item-list__card-item competitions__item">
+        <img src="img/competitions-3.jpg" alt="" class="competitions__picture">
         <div class="item-list__wrap">
-          <h4 class="item-list__title">2020 Bugatti Chiron</h4>
-          <b class="item-list__price">$0.99</b>
-          <s class="item-list__old-price">$1.39</s>
-          <p class="item-list__text">4014 tickets remaining</p>
-          <a class="item-list__link">
-            <img class="item-list__arrow-icon" src="img/arrow-right-white.svg" alt="">
+          <h4 class="item-list__title competitions__item-list-title">2020 Bugatti Chiron</h4>
+          <b class="competitions__price">$0.99</b>
+          <s class="competitions__old-price">$1.39</s>
+          <p class="item-list__text competitions__item-list-text">4014 tickets remaining</p>
+          <a class="competitions__link" href="#">
+            <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
           </a>
         </div>
       </li>
-      <li class="item-list__item card-item">
-        <img src="img/competitions-4.jpg" alt="" class="item-list__picture">
+      <li class="item-list__card-item competitions__item">
+        <img src="img/competitions-4.jpg" alt="" class="competitions__picture">
         <div class="item-list__wrap">
-          <h4 class="item-list__title">2019 Porsche 911 Carrera</h4>
-          <b class="item-list__price">$1.99</b>
-          <s class="item-list__old-price">$2.99</s>
-          <p class="item-list__text">484 tickets remaining</p>
-          <a class="item-list__link">
-            <img class="item-list__arrow-icon" src="img/arrow-right-white.svg" alt="">
+          <h4 class="item-list__title competitions__item-list-title">2019 Porsche 911 Carrera</h4>
+          <b class="competitions__price">$1.99</b>
+          <s class="competitions__old-price">$2.99</s>
+          <p class="item-list__text competitions__item-list-text">484 tickets remaining</p>
+          <a class="competitions__link" href="#">
+            <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
           </a>
         </div>
       </li>
@@ -155,12 +156,28 @@
   </section>
 
   <section class="reviews wrapper">
-    <div class="reviews__wrapper first__reviews">
-      <blockquote class="review__item">
-        <p class="reviews-text">"Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What great blokes. <br> Thank you very much! <br> 5 star from me!!!"</p>
-        <cite class="reviews__author">DANNY CHURCHMAN</cite>
-      </blockquote>
+
+    <div class="reviews__wrapper first__reviews slider-reviews">
+      <div class="slider-reviews__item">
+        <blockquote class="review__item">
+          <p class="reviews-text">"Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What great blokes. <br> Thank you very much! <br> 5 star from me!!!"</p>
+          <cite class="reviews__author">DANNY CHURCHMAN 1</cite>
+        </blockquote>
+      </div>
+      <div class="slider-reviews__item">
+        <blockquote class="review__item">
+          <p class="reviews-text">"Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What great blokes. <br> Thank you very much! <br> 5 star from me!!!"</p>
+          <cite class="reviews__author">DANNY CHURCHMAN 2</cite>
+        </blockquote>
+      </div>
+      <div class="slider-reviews__item">
+        <blockquote class="review__item">
+          <p class="reviews-text">"Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What great blokes. <br> Thank you very much! <br> 5 star from me!!!"</p>
+          <cite class="reviews__author">DANNY CHURCHMAN 3</cite>
+        </blockquote>
+      </div>
     </div>
+
     <div class="reviews__wrapper last__reviews">
       <img src="img/reviews-author.jpg" alt="reviews-author">
     </div>
@@ -168,36 +185,38 @@
 
   <section class="winners wrapper">
     <h3 class="winners__title">Latest Winners</h3>
-    <ul class="winners__list item-list">
-      <li class="item-list__item card-item">
-        <img src="img/winners-1.jpg" alt="" class="item-list__picture">
+
+    <ul class="winners__list item-list slider-winners">
+      <li class="item-list__card-item">
+        <img src="img/winners-1.jpg" alt="" class="winners__picture">
         <div class="item-list__wrap">
-          <h4 class="item-list__title">Ferrari 458</h4>
-          <p class="item-list__text">12 November 2020</p>
+          <h4 class="item-list__title winners__item-list-title">Ferrari 458</h4>
+          <p class="item-list__text winners__text">12 November 2020</p>
         </div>
       </li>
-      <li class="item-list__item card-item">
-        <img src="img/winners-2.jpg" alt="" class="item-list__picture">
+      <li class="item-list__card-item">
+        <img src="img/winners-2.jpg" alt="" class="winners__picture">
         <div class="item-list__wrap">
-          <h4 class="item-list__title">Aquila Gullwing</h4>
-          <p class="item-list__text">9 November 2020</p>
+          <h4 class="item-list__title winners__item-list-title">Aquila Gullwing</h4>
+          <p class="item-list__text winners__text">9 November 2020</p>
         </div>
       </li>
-      <li class="item-list__item card-item">
-        <img src="img/winners-3.jpg" alt="" class="item-list__picture">
+      <li class="item-list__card-item">
+        <img src="img/winners-3.jpg" alt="" class="winners__picture">
         <div class="item-list__wrap">
-         <h4 class="item-list__title">2020 Audi S5 Coupe</h4>
-          <p class="item-list__text">5 November 2020</p>
+         <h4 class="item-list__title winners__item-list-title">2020 Audi S5 Coupe</h4>
+          <p class="item-list__text winners__text">5 November 2020</p>
         </div>
       </li>
-      <li class="item-list__item card-item">
-        <img src="img/winners-4.jpg" alt="" class="item-list__picture">
+      <li class="item-list__card-item">
+        <img src="img/winners-4.jpg" alt="" class="winners__picture">
         <div class="item-list__wrap">
-          <h4 class="item-list__title"> Ferrari Purosangue SUV</h4>
-          <p class="item-list__text"> 25 September 2020</p>
+          <h4 class="item-list__title winners__item-list-title"> Ferrari Purosangue SUV</h4>
+          <p class="item-list__text winners__text"> 25 September 2020</p>
         </div>
       </li>
     </ul>
+
   </section>
 
  </main>
@@ -208,18 +227,23 @@
       LOGOAUTO
       </h2>
       <ul class="main-nav main-nav-footer main-nav--light">
-        <li class="main-nav__item"><a>Latest Competitions</a></li>
-        <li class="main-nav__item"><a>Enty Lists</a></li>
-        <li class="main-nav__item"><a>Live Draws</a></li>
-        <li class="main-nav__item"><a>Winners</a></li>
-        <li class="main-nav__item"><a>Gift Cards</a></li>
-        <li class="main-nav__item"><a>How it Works</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Latest Competitions</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Enty Lists</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Live Draws</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Winners</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Gift Cards</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">How it Works</a></li>
       </ul>
     </div>
   </footer>
 
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/javascript.js"></script>
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="js/javascript.js" type="text/javascript"></script>
+  <script src="js/slick.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+
+  </script>
 
 </body>
 </html>

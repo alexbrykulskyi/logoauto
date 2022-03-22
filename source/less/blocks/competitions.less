@@ -5,10 +5,6 @@
   }
 }
 
-.item-list__item {
-  position: relative;
-}
-
 .competitions__title {
   color: @text-color-secondary;
   .bold-secondary();
@@ -18,17 +14,67 @@
   margin-bottom: 30px;
 }
 
-.item-list__link {
+.competitions__list {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+ }
+}
+
+.competitions__item {
+  width: 270px;
+  height: 283px;
+}
+
+.competitions__picture {
+  width: 270px;
+  height: 160px;
+}
+
+.competitions__item-list-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.competitions__price {
+  .bold-secondary();
+  color: @lid-color;
+  font-size: 30px;
+  line-height: 38px;
+  margin-right: 5px;
+}
+
+.competitions__old-price {
+  .medium-secondary();
+  color: #999999;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.competitions__item-list-text {
+  margin-top: 12px;
+ @media (min-width: @tablet-width) {
+   margin-top: 5px;
+ }
+}
+
+
+.competitions__link {
   position: absolute;
-  padding: 10px 13px;
+  padding: 18px 15px;
   background-color: @bright;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
   right: 0;
   bottom: 0;
+  @media (min-width: @tablet-width) {
+    padding: 8px 12px;
+  }
 }
 
-.item-list__arrow-icon {
-  width: 16px;
-  height: 10px;
+.competitions__arrow-icon {
+  width: 20px;
+  height: 13px;
 }
