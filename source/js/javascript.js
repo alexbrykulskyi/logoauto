@@ -1,40 +1,40 @@
-$('.button-toggle').on('click', function(evt){
-     $('.button-toggle').toggleClass('button--active')
-     $('.modal-header').toggleClass('display--none')
-    });
+$(document).ready(function() {
+  $('.button-toggle').on('click', function(evt){
+    $('.button-toggle').toggleClass('button--active')
+    $('.modal-header').toggleClass('display--none')
+  });
 
-$('.slider-reviews').slick({
-  arrows: false,
-  dots: true,
-});
+  $('.slider-reviews').slick({
+    arrows: false,
+    dots: true,
+  });
 
-function mobileOnlySlider() {
-    $(document).ready(function(){
-      $('.slider-winners').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false
-      });
-
-      $('.slider-competitions').slick({
-
-      });
-    });
-}
-if(window.innerWidth < 768) {
-    mobileOnlySlider();
-}
-$(window).resize(function(e){
-    if(window.innerWidth < 768) {
-        if(!$('.slider-competitions, .slider-winners').hasClass('slick-initialized')){
-            mobileOnlySlider();
+  $('.slider-competitions').slick({
+    slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2
         }
-
-    }else{
-        if($('.slider-competitions, .slider-winners').hasClass('slick-initialized')){
-            $('.slider-competitions, .slider-winners').slick('unslick');
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
-    }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
 });
