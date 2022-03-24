@@ -15,8 +15,11 @@
 }
 
 .competitions__list {
-  display: flex;
-  flex-direction: row;
+  height: 280px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 10px;
   @media (max-width: @tablet-width) {
     display: flex;
     justify-content: center;
@@ -24,13 +27,12 @@
 }
 
 .competitions__item {
-  width: 270px;
-  height: 283px;
+  position: relative;
 }
 
 .competitions__picture {
-  width: 270px;
-  height: 160px;
+  width: 100%;
+  height: auto;
 }
 
 .competitions__item-list-title {

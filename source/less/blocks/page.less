@@ -1,25 +1,27 @@
 .page-html {
   .reg-basic();
-  height: 100%;
   font-size: 16px;
   line-height: 22px;
 }
 
 .page {
+  min-width: 360px;
   padding: 0;
   margin: 0;
   background-color: @light;
   color: @text-color-basic;
-}
-
-.wrapper {
-  width: 360px;
-  box-sizing: border-box;
-  padding: 0 16px;
-  margin: 0 auto;
   @media (min-width: @tablet-width) {
     min-width: 1280px;
-    padding: 0 55px;
+  }
+}
+
+.container {
+  width: 360px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  @media (min-width: @tablet-width) {
+    width: 1200px;
   }
 }
 

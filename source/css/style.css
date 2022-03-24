@@ -177,26 +177,30 @@ img {
 /* Файл page.less */
 .page-html {
   font-family: 'OpenSans__reg', sans-serif;
-  height: 100%;
   font-size: 16px;
   line-height: 22px;
 }
 .page {
+  min-width: 360px;
   padding: 0;
   margin: 0;
   background-color: #fff;
   color: #252A34;
 }
-.wrapper {
+@media (min-width: 768px) {
+  .page {
+    min-width: 1280px;
+  }
+}
+.container {
   width: 360px;
-  box-sizing: border-box;
-  padding: 0 16px;
   margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
-  .wrapper {
-    min-width: 1280px;
-    padding: 0 55px;
+  .container {
+    width: 1200px;
   }
 }
 /* Файл main-nav.less */
@@ -211,7 +215,7 @@ img {
     margin-bottom: 100px;
   }
 }
-.header__wrapper {
+.header__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,7 +223,7 @@ img {
   min-height: 56px;
 }
 @media (min-width: 768px) {
-  .header__wrapper {
+  .header__container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -381,49 +385,13 @@ img {
 }
 @media (min-width: 768px) {
   .banner__car-picture {
-    width: 755px;
+    width: 100%;
+    height: auto;
+    margin-left: 60px;
   }
 }
 .banner__title-decor {
   color: #FF2E63;
-}
-/* Файл latest-list.less */
-.item-list {
-  font-family: 'Rajdhani_bold', sans-serif;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 20px;
-  line-height: 26px;
-}
-.item-list__card-item {
-  position: relative;
-  border-radius: 10px;
-}
-@media (min-width: 768px) {
-  .item-list__card-item {
-    box-shadow: 0 5px 10px 1px lightgray;
-  }
-}
-@media (min-width: 768px) {
-  .item-list__card-item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-.item-list__wrap {
-  padding-left: 20px;
-}
-.item-list__title {
-  font-family: 'Rajdhani_bold', sans-serif;
-  font-size: 20px;
-  line-height: 26px;
-  margin: 0;
-}
-.item-list__text {
-  font-family: 'OpenSans__reg', sans-serif;
-  font-size: 14px;
-  color: #343434;
-  margin: 0;
 }
 /* Файл competitions.less */
 .competitions {
@@ -443,8 +411,11 @@ img {
   margin-bottom: 30px;
 }
 .competitions__list {
-  display: flex;
-  flex-direction: row;
+  height: 280px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-radius: 10px;
 }
 @media (max-width: 768px) {
   .competitions__list {
@@ -453,12 +424,11 @@ img {
   }
 }
 .competitions__item {
-  width: 270px;
-  height: 283px;
+  position: relative;
 }
 .competitions__picture {
-  width: 270px;
-  height: 160px;
+  width: 100%;
+  height: auto;
 }
 .competitions__item-list-title {
   margin-top: 10px;
@@ -587,42 +557,41 @@ img {
 /* Файл reviews.less */
 .reviews {
   margin-bottom: 60px;
-  padding: 55px 0 ;
+  background-color: rgba(52, 108, 217, 0.12);
 }
 @media (min-width: 768px) {
   .reviews {
     margin-bottom: 100px;
-    display: flex;
-    flex-direction: row;
     padding: 0;
   }
 }
-@media (max-width: 768px) {
-  .reviews {
-    background-color: rgba(52, 108, 217, 0.12);
-  }
+.reviews__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.reviews__items {
+  width: 100%;
 }
 @media (min-width: 768px) {
-  .reviews__wrapper {
+  .reviews__items {
     width: 50%;
-    height: 400px;
   }
 }
-.review__item {
-  margin: 0;
-}
 .reviews-text {
+  margin: 0;
   font-family: 'OpenSans__semiBold', sans-serif;
   color: #343434;
   font-size: 20px;
   line-height: 30px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  width: 328px;
 }
 @media (min-width: 768px) {
   .reviews-text {
-    width: 400px;
     margin-bottom: 30px;
   }
 }
@@ -630,15 +599,12 @@ img {
   font-family: 'OpenSans__reg', sans-serif;
   font-style: normal;
 }
+.reviews__picture {
+  width: 100%;
+  height: auto;
+}
 .first__reviews {
   text-align: center;
-}
-@media (min-width: 768px) {
-  .first__reviews {
-    background-color: rgba(52, 108, 217, 0.12);
-    padding-top: 80px;
-    box-sizing: border-box;
-  }
 }
 @media (max-width: 768px) {
   .last__reviews {
@@ -656,11 +622,14 @@ img {
 }
 .winners__list {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .winners__picture {
-  width: 270px;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
 .winners__title {
   font-family: 'Rajdhani_bold', sans-serif;
@@ -677,18 +646,16 @@ img {
 }
 /* Файл footer-page.less */
 .page__footer {
-  min-width: 1280px;
   background-color: #346CD9;
 }
 @media (max-width: 768px) {
   .page__footer {
     padding-top: 16px;
     padding-bottom: 16px;
-    min-width: 360px;
   }
 }
 @media (min-width: 768px) {
-  .footer__wrapper {
+  .footer__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -722,7 +689,7 @@ img {
   background-color: #fff;
   z-index: 1;
 }
-.modal-wrapper {
+.modal-container {
   display: flex;
   justify-content: start;
   position: relative;
@@ -761,5 +728,52 @@ img {
   .mobile-deactive {
     display: none;
   }
+}
+/* Файл sliders.less */
+@media (max-width: 768px) {
+  .slick-list {
+    width: 270px;
+  }
+}
+.slick-list {
+  height: 280px;
+  border-radius: 10px;
+}
+.slick-arrow {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 0;
+}
+.slick-next {
+  background: url("../img/slider-arrow-right.svg") center no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -25px;
+}
+.slick-prev {
+  background: url("../img/slider-arrow-left.svg") center no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -25px;
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+.slick-dots li:not(:last-child) {
+  margin-right: 25px;
+}
+.slick-dots button {
+  height: 15px;
+  width: 15px;
+  border: none;
+  border-radius: 100%;
+  font-size: 0;
+  background-color: #FF2E63;
 }
 /*# sourceMappingURL=style.css.map */
