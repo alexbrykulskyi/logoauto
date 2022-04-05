@@ -11,53 +11,28 @@
 
   <header class="header page__header">
     <div class="container header__container">
-      <div class="logo-container header__logo-container">
-        <h2 class="logo logo-container__logo">
-          LOGO<span class="logo__decor">AUTO</span>
-        </h2>
-        <a class="button-toggle">
-          <span class="button-toggle__burger"></span>
-        </a>
-      </div>
-      <ul class="main-nav header__main-nav mobile-deactive">
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Latest Competitions</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Enty Lists</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Live Draws</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Winners</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Gift Cards</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">How it Works</a></li>
-      </ul>
-      <div class="buttons-wrapper mobile-deactive">
-        <a class="button button-first button--login" href="#">Logian</a>
-        <a data-hover="Register" class="button button-second button--register" href="#">Register</a>
+      <a href="#" class="logo header__logo logo--dark">
+        LOGO<span class="logo__decor">AUTO</span>
+      </a>
+      <a class="button-toggle">
+        <span class="button-toggle__burger"></span>
+      </a>
+      <div class="popup-wrapper">
+        <ul class="main-nav header__main-nav">
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Latest Competitions</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Enty Lists</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Live Draws</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Winners</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">Gift Cards</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="#">How it Works</a></li>
+        </ul>
+        <div class="button-wrapper">
+          <a class="button button-first button--login" href="#">Logian</a>
+          <a data-hover="Register" class="button button-second button--register" href="#">Register</a>
+        </div>
       </div>
     </div>
   </header>
-
-  <div class="header page__header modal-header display--none">
-    <div class="container header__container modal-container">
-      <div class="logo-container header__logo-container modal-container">
-        <h2 class="logo logo-container__logo modal-logo">
-          LOGO<span class="modal-logo__log logo--light">AUTO</span>
-        </h2>
-        <a class="button-toggle modal-button-toggle">
-          <span class="button-toggle__burger modal-burger"></span>
-        </a>
-      </div>
-      <ul class="main-nav header__main-nav modal-nav">
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Latest Competitions</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Enty Lists</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Live Draws</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Winners</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">Gift Cards</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">How it Works</a></li>
-      </ul>
-      <div class="buttons-wrapper">
-        <a class="button button-second button--register" href="#">Register</a>
-        <a class="button button-first button--login" href="#">Logian</a>
-      </div>
-    </div>
-  </div>
 
   <main class="main-page">
 
@@ -78,55 +53,63 @@
     </div>
 
     <section class="competitions">
-      <div class="container">
+      <div class="container competitions__container">
         <h3 class="competitions__title">Latest Competitions</h3>
         <ul class="competitions__list slider-competitions">
           <li class="competitions__item">
-            <img src="img/competitions-1.jpg" alt="" class="competitions__picture">
-            <div class="competitions__wrap">
-              <h4 class="competitions__item-list-title">2020 Audi S5 Coupe</h4>
-              <b class="competitions__price">$19.99</b>
-              <s class="competitions__old-price">54.68</s>
-              <p class="item-list__text competitions__item-list-text">5878 tickets remaining</p>
-              <a class="competitions__link" href="#">
-                <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
-              </a>
+            <div class="competitions__item-wrapper">
+              <img src="img/competitions-1.jpg" alt="" class="competitions__picture">
+              <div class="competitions__wrap">
+                <h4 class="competitions__item-list-title">2020 Audi S5 Coupe</h4>
+                <b class="competitions__price">$19.99</b>
+                <s class="competitions__old-price">54.68</s>
+                <p class="item-list__text competitions__item-list-text">5878 tickets remaining</p>
+                <a class="competitions__link" href="#">
+                  <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
+                </a>
+              </div>
             </div>
           </li>
           <li class="item-list__card-item competitions__item">
-            <img src="img/competitions-2.jpg" alt="" class="competitions__picture">
-            <div class="item-list__wrap">
-              <h4 class="item-list__title competitions__item-list-title">2016 Ford Mustang GT</h4>
-              <b class="competitions__price">$7.99</b>
-              <s class="competitions__old-price">$9.68</s>
-              <p class="item-list__text competitions__item-list-text">$3290 tickets remaining</p>
-              <a class="competitions__link" href="#">
-                <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
-              </a>
+            <div class="competitions__item-wrapper">
+              <img src="img/competitions-2.jpg" alt="" class="competitions__picture">
+              <div class="competitions__wrap">
+                <h4 class="item-list__title competitions__item-list-title">2016 Ford Mustang GT</h4>
+                <b class="competitions__price">$7.99</b>
+                <s class="competitions__old-price">$9.68</s>
+                <p class="item-list__text competitions__item-list-text">$3290 tickets remaining</p>
+                <a class="competitions__link" href="#">
+                  <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
+                </a>
+              </div>
             </div>
           </li>
           <li class="item-list__card-item competitions__item">
-            <img src="img/competitions-3.jpg" alt="" class="competitions__picture">
-            <div class="item-list__wrap">
-              <h4 class="item-list__title competitions__item-list-title">2020 Bugatti Chiron</h4>
-              <b class="competitions__price">$0.99</b>
-              <s class="competitions__old-price">$1.39</s>
-              <p class="item-list__text competitions__item-list-text">4014 tickets remaining</p>
-              <a class="competitions__link" href="#">
-                <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
-              </a>
+            <div class="competitions__item-wrapper">
+              <img src="img/competitions-3.jpg" alt="" class="competitions__picture">
+              <div class="competitions__wrap">
+                <h4 class="item-list__title competitions__item-list-title">2020 Bugatti Chiron</h4>
+                <b class="competitions__price">$0.99</b>
+                <s class="competitions__old-price">$1.39</s>
+                <p class="item-list__text competitions__item-list-text">4014 tickets remaining</p>
+                <a class="competitions__link" href="#">
+                  <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
+                </a>
+              </div>
             </div>
           </li>
           <li class="item-list__card-item competitions__item">
-            <img src="img/competitions-4.jpg" alt="" class="competitions__picture">
-            <div class="item-list__wrap">
-              <h4 class="item-list__title competitions__item-list-title">2019 Porsche 911 Carrera</h4>
-              <b class="competitions__price">$1.99</b>
-              <s class="competitions__old-price">$2.99</s>
-              <p class="item-list__text competitions__item-list-text">484 tickets remaining</p>
-              <a class="competitions__link" href="#">
-                <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
-              </a>
+            <div class="competitions__item-wrapper">
+              <img src="img/competitions-4.jpg" alt="" class="competitions__picture">
+              <div class="competitions__wrap">
+                <h4 class="item-list__title competitions__item-list-title">2019 Porsche 911 Carrera</h4>
+                <b class="competitions__price">$1.99</b>
+                <s class="competitions__old-price">$2.99</s>
+                <p class="item-list__text competitions__item-list-text">484 tickets remaining</p>
+                <a class="competitions__link" href="#">
+                  <img class="competitions__arrow-icon" src="img/arrow-right-white.svg" alt="">
+                </a>
+              </div>
             </div>
           </li>
         </ul>
@@ -134,55 +117,53 @@
     </section>
 
     <section class="advantages">
-      <div class="container">
+      <div class="container advantages__container">
         <h3 class="advantages__title">How it works</h3>
-        <div class="advantages__wrapper">
-          <ul class="advantage-list">
-            <li class="advantage__item">
-              <img class="advantage__icon" src="img/touchscreen.svg" alt="touchscreen">
-              <p class="advantage__text">Choose a competition and how many entries you would like</p>
-            </li>
-            <li class="advantage__item">
-              <img class="advantage__icon" src="img/online-payment.svg" alt="online-payment">
-              <p class="advantage__text">Answer the qualifyling question <b>(be sure to answer correctly!)</b> <br>and copmlete payment</p>
-            </li>
-            <li class="advantage__item">
-              <img class="advantage__icon" src="img/movie-tickets.svg" alt="movie-tickets">
-              <p class="advantage__text">Tickets for all correct answers are entered into the draw, streamed LIVE on Facebook using Google's random number generator</p>
-            </li>
-            <li class="advantage__item">
-              <img class="advantage__icon" src="img/winner.svg" alt="">
-              <p class="advantage__text">If you win, we may try to contact you whilst live on Favebook, so be prepared!</p>
-            </li>
-          </ul>
-        </div>
+        <ul class="advantage-list">
+          <li class="advantage__item">
+            <img class="advantage__icon" src="img/touchscreen.svg" alt="touchscreen">
+            <p class="advantage__text">Choose a competition and how many entries you would like</p>
+          </li>
+          <li class="advantage__item">
+            <img class="advantage__icon" src="img/online-payment.svg" alt="online-payment">
+            <p class="advantage__text">Answer the qualifyling question <b>(be sure to answer correctly!)</b> <br>and copmlete payment</p>
+          </li>
+          <li class="advantage__item">
+            <img class="advantage__icon" src="img/movie-tickets.svg" alt="movie-tickets">
+            <p class="advantage__text">Tickets for all correct answers are entered into the draw, streamed LIVE on Facebook using Google's random number generator</p>
+          </li>
+          <li class="advantage__item">
+            <img class="advantage__icon" src="img/winner.svg" alt="">
+            <p class="advantage__text">If you win, we may try to contact you whilst live on Favebook, so be prepared!</p>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="reviews">
       <div class="reviews__container">
-        <div class="reviews__items first__reviews slider-reviews">
-          <div class="reviews__list">
-            <blockquote class="review__item">
+        <div class="reviews__wrapper first__reviews slider-reviews">
+          <div class="">
+            <blockquote class="reviews__blockquote">
               <p class="reviews-text">"Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What great blokes. <br> Thank you very much! <br> 5 star from me!!!"</p>
               <cite class="reviews__author">DANNY CHURCHMAN 1</cite>
             </blockquote>
           </div>
-          <div class="slider-reviews__item">
-            <blockquote class="review__item">
+          <div class="">
+            <blockquote class="reviews__blockquote">
               <p class="reviews-text">"Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What great blokes. <br> Thank you very much! <br> 5 star from me!!!"</p>
               <cite class="reviews__author">DANNY CHURCHMAN 2</cite>
             </blockquote>
           </div>
-          <div class="slider-reviews__item">
-            <blockquote class="review__item">
+          <div class="">
+            <blockquote class="reviews__blockquote">
               <p class="reviews-text">"Unbelievable this is a dream come true, no way would I ever think I would own a car like this. What great blokes. <br> Thank you very much! <br> 5 star from me!!!"</p>
               <cite class="reviews__author">DANNY CHURCHMAN 3</cite>
             </blockquote>
           </div>
         </div>
 
-        <div class="reviews__items last__reviews">
+        <div class="reviews__wrapper last__reviews">
           <img class="reviews__picture" src="img/reviews-author.jpg" alt="reviews-author">
         </div>
       </div>
@@ -229,8 +210,8 @@
 
   <footer class="footer page__footer">
     <div class="container footer__container">
-      <h2 class="footer__logo logo logo--light">LOGOAUTO</h2>
-      <ul class="main-nav main-nav-footer main-nav--light">
+      <a href="#" class="logo footer__logo logo--light">LOGOAUTO</a>
+      <ul class="main-nav footer__main-nav main-nav--light">
         <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Latest Competitions</a></li>
         <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Enty Lists</a></li>
         <li class="main-nav__item"><a class="main-nav__link main-nav__link--light" href="#">Live Draws</a></li>

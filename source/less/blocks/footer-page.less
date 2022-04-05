@@ -9,17 +9,23 @@
 .footer__container{
   @media (min-width: @tablet-width) {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 70px;
   }
 }
 
 .footer__logo {
+  margin: 16px 0;
   @media (max-width: @tablet-width) {
   margin: 0;
-  margin-bottom: 30px;
+  }
+}
+
+.footer__main-nav {
+  font-size: 14px;
+  line-height: 19px;
+  @media (max-width: @tablet-width) {
+    margin-top: 30px;
   }
 }
 

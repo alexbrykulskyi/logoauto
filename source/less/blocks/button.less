@@ -8,6 +8,16 @@
   text-decoration: none;
 }
 
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 182px;
+  @media (min-width: @tablet-width) {
+   margin-left: 99px;
+  }
+}
+
 .button--login {
   color: @lid-color;
   background: @light;
@@ -23,6 +33,8 @@
   color: @light;
   background-color: @bright;
 }
+
+/*Button popup*/
 
 .button-toggle {
   display: none;
@@ -77,13 +89,7 @@
   transform: rotate(-45deg);
 }
 
-.buttons-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 200px;
-  border-radius: 5px;
-}
+/*Button styles :hover*/
 
 @media (min-width: @tablet-width) {
 
@@ -105,7 +111,6 @@
 
   .button-first {
     position: relative;
-    display: inline-block;
   }
 
   .button-first::after {
