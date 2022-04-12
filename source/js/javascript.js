@@ -7,6 +7,8 @@ $(document).ready(function() {
     $('.logo-container__logo, .logo__decor').toggleClass('logo--light')
   });
 
+
+
   $('.slider-competitions').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -20,6 +22,28 @@ $(document).ready(function() {
         settings: "unslick"
       }
     ]
+  });
+
+  $('.slider-winners').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: "slick",
+      },
+      {
+        breakpoint: 4000,
+        settings: "unslick"
+      }
+    ]
+  });
+
+   $('.slider-reviews').slick({
+    slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: false,
   });
 
 });

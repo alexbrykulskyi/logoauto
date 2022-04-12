@@ -60,17 +60,6 @@ img {
   box-sizing: border-box;
   text-decoration: none;
 }
-.button-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 182px;
-}
-@media (min-width: 768px) {
-  .button-wrapper {
-    margin-left: 99px;
-  }
-}
 .button--login {
   color: #FF2E63;
   background: #fff;
@@ -83,6 +72,17 @@ img {
 .button--basic {
   color: #fff;
   background-color: #346CD9;
+}
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 182px;
+}
+@media (min-width: 768px) {
+  .button-wrapper {
+    margin-left: 99px;
+  }
 }
 /*Button popup*/
 .button-toggle {
@@ -202,8 +202,17 @@ img {
   }
 }
 /* Файл main-nav.less */
-.page__header {
-  margin-bottom: 100px;
+@media (max-width: 768px) {
+  .page__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    overflow: auto;
+    background-color: #fff;
+    z-index: 999999;
+  }
 }
 @media (min-width: 768px) {
   .page__header {
@@ -214,19 +223,6 @@ img {
 @media (max-width: 768px) {
   .header--bg {
     background-color: #FF2E63;
-  }
-}
-@media (max-width: 768px) {
-  .header__container {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    top: 10px;
-    left: 0;
-    overflow: auto;
-    transition: transform 0.3s ease 0s;
-    background-color: #fff;
   }
 }
 @media (min-width: 768px) {
@@ -250,13 +246,17 @@ img {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 16px;
+    left: 0px;
     margin-top: 105px;
+    padding-left: 16px;
     overflow: auto;
     transform: translate(0px, -115%);
     transition: transform 0.3s ease 0s;
     background-color: #fff;
   }
+}
+.popup-open {
+  transform: translate(0px, 0px);
 }
 .main-nav {
   width: auto;
@@ -275,9 +275,6 @@ img {
     font-size: 14px;
     line-height: 19px;
   }
-}
-.popup-open {
-  transform: translate(0px, 0px);
 }
 .main-nav__item {
   margin-bottom: 30px;
@@ -349,17 +346,19 @@ img {
   color: #FF2E63;
 }
 /* Файл banner.less */
-.main-page__banner {
+.banner__container {
   display: flex;
   flex-direction: column;
   min-height: 400px;
+  margin-top: 147px;
   margin-bottom: 60px;
 }
 @media (min-width: 768px) {
-  .main-page__banner {
+  .banner__container {
     display: flex;
     flex-direction: row;
-    margin-bottom: 100px;
+    margin-top: 0;
+    margin-bottom: 76px;
   }
 }
 .banner__wrapper-left {
@@ -396,7 +395,7 @@ img {
     line-height: 60px;
     letter-spacing: 1px;
     margin-top: 95px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
 .banner__intro {
@@ -408,9 +407,9 @@ img {
 }
 @media (min-width: 768px) {
   .banner__car-picture {
-    width: 100%;
-    height: auto;
-    margin-left: 60px;
+    width: 755px;
+    height: 302px;
+    margin-left: -2px;
   }
 }
 .banner__title-decor {
@@ -435,6 +434,7 @@ img {
 }
 .competitions__list {
   margin: 0 -15px;
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -444,9 +444,13 @@ img {
   padding: 0 15px;
 }
 .competitions__item-wrapper {
-  height: 100%;
+  height: 283px;
   border-radius: 10px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 768px) {
+  .competitions__item-wrapper {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  }
 }
 .competitions__picture {
   width: 100%;
@@ -456,8 +460,11 @@ img {
   padding-left: 20px;
 }
 .competitions__item-list-title {
-  margin-top: 10px;
+  font-family: 'Rajdhani_bold', sans-serif;
+  margin-top: 20px;
   margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 26px;
 }
 .competitions__price {
   font-family: 'Rajdhani_bold', sans-serif;
@@ -473,16 +480,20 @@ img {
   line-height: 26px;
 }
 .competitions__item-list-text {
-  margin-top: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 19px;
 }
 @media (min-width: 768px) {
   .competitions__item-list-text {
-    margin-top: 5px;
+    margin-top: 2px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 .competitions__link {
   position: absolute;
-  padding: 18px 15px;
+  padding: 13px 10px;
   background-color: #346CD9;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -581,61 +592,37 @@ img {
   height: 64px;
 }
 /* Файл reviews.less */
-.reviews {
+.page__reviews {
   margin-bottom: 60px;
   background-color: rgba(52, 108, 217, 0.12);
 }
 @media (min-width: 768px) {
-  .reviews {
+  .page__reviews {
     margin-bottom: 100px;
     padding: 0;
   }
 }
-.reviews__container {
-  display: flex;
-  align-items: center;
-}
 .reviews__wrapper {
-  margin: 50px 0;
-}
-@media (min-width: 768px) {
-  .reviews__wrapper {
-    width: 50%;
-  }
+  height: 400px;
 }
 .reviews__blockquote {
-  width: 328px;
-  text-align: center;
+  display: inline-block;
+  width: 50%;
+  margin: 0;
 }
-@media (min-width: 768px) {
-  .reviews__blockquote {
-    width: 400px;
-  }
-}
-@media (max-width: 768px) {
-  .last__reviews {
-    display: none;
-  }
+.reviews__wrapper-img {
+  display: inline-block;
 }
 .reviews-text {
-  margin: 0;
+  margin: 7px 120px 20px 120px;
   font-family: 'OpenSans__semiBold', sans-serif;
   color: #343434;
   font-size: 20px;
   line-height: 30px;
 }
-@media (min-width: 768px) {
-  .reviews-text {
-    margin-bottom: 30px;
-  }
-}
 .reviews__author {
   font-family: 'OpenSans__reg', sans-serif;
   font-style: normal;
-}
-.reviews__picture {
-  width: 100%;
-  height: auto;
 }
 .slick-dots {
   display: flex;
@@ -654,24 +641,13 @@ img {
   background-color: #FF2E63;
 }
 /* Файл winners.less */
-.winners {
+.winners__container {
   margin-bottom: 60px;
 }
 @media (min-width: 768px) {
-  .winners {
+  .winners__container {
     margin-bottom: 100px;
   }
-}
-.winners__list {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.winners__picture {
-  width: 100%;
-  height: auto;
 }
 .winners__title {
   font-family: 'Rajdhani_bold', sans-serif;
@@ -680,14 +656,39 @@ img {
   color: #343434;
   margin-top: 0;
 }
-.winners__item-list-title {
-  margin-top: 20px;
+.winners__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0 -15px;
+  padding: 0;
+}
+.winners__item-wrap {
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  height: 100%;
+}
+.winners__item {
+  padding: 0 15px;
+  height: 288px;
+}
+.winners__picture {
+  width: 100%;
+  height: auto;
 }
 .winners__wrap {
   padding-left: 20px;
 }
+.winners__item-list-title {
+  font-family: 'Rajdhani_bold', sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0;
+  margin-top: 10px;
+}
 .winners__text {
-  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 19px;
 }
 /* Файл footer-page.less */
 .page__footer {

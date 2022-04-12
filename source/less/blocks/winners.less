@@ -1,21 +1,8 @@
-.winners {
+.winners__container {
   margin-bottom: 60px;
   @media (min-width: @tablet-width) {
     margin-bottom: 100px;
   }
-}
-
-.winners__list {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.winners__picture {
-  width: 100%;
-  height: auto;
 }
 
 .winners__title {
@@ -26,14 +13,43 @@
   margin-top: 0;
 }
 
-.winners__item-list-title {
-  margin-top: 20px;
+.winners__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0 -15px;
+  padding: 0;
+}
+
+.winners__item-wrap {
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  height: 100%;
+}
+
+.winners__item {
+  padding: 0 15px;
+  height: 288px;
+}
+
+.winners__picture {
+  width: 100%;
+  height: auto;
 }
 
 .winners__wrap {
   padding-left: 20px;
 }
 
+.winners__item-list-title {
+  .bold-secondary();
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0;
+  margin-top: 10px;
+}
+
 .winners__text {
-  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 19px;
 }

@@ -16,6 +16,7 @@
 
 .competitions__list {
   margin: 0 -15px;
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -27,9 +28,11 @@
 }
 
 .competitions__item-wrapper {
-  height: 100%;
+  height: 283px;
   border-radius: 10px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  @media (min-width: @tablet-width) {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+  }
 }
 
 .competitions__picture {
@@ -42,8 +45,11 @@
 }
 
 .competitions__item-list-title {
-  margin-top: 10px;
+  .bold-secondary();
+  margin-top: 20px;
   margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 .competitions__price {
@@ -62,16 +68,20 @@
 }
 
 .competitions__item-list-text {
-  margin-top: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 19px;
+
  @media (min-width: @tablet-width) {
-   margin-top: 5px;
+   margin-top: 2px;
+   font-size: 16px;
+   line-height: 22px;
  }
 }
 
-
 .competitions__link {
   position: absolute;
-  padding: 18px 15px;
+  padding: 13px 10px;
   background-color: @bright;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
