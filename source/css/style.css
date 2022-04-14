@@ -78,11 +78,7 @@ img {
   align-items: center;
   justify-content: space-between;
   width: 182px;
-}
-@media (min-width: 768px) {
-  .button-wrapper {
-    margin-left: 99px;
-  }
+  margin-left: 15px;
 }
 /*Button popup*/
 .button-toggle {
@@ -148,6 +144,7 @@ img {
   }
   .button-first {
     position: relative;
+    margin-right: 10px;
   }
   .button-first::after {
     position: absolute;
@@ -191,14 +188,15 @@ img {
   line-height: 22px;
 }
 .container {
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 /* Файл main-nav.less */
@@ -211,7 +209,7 @@ img {
     padding-top: 10px;
     overflow: auto;
     background-color: #fff;
-    z-index: 999999;
+    z-index: 999;
   }
 }
 @media (min-width: 768px) {
@@ -227,15 +225,19 @@ img {
 }
 @media (min-width: 768px) {
   .header__container {
-    flex-direction: row;
-    flex-wrap: wrap;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
+}
+.header__logo {
+  margin-right: 15px;
 }
 .popup-wrapper {
   display: flex;
   align-items: center;
+  margin-left: 15px;
 }
 @media (max-width: 768px) {
   .popup-wrapper {
@@ -259,7 +261,6 @@ img {
   transform: translate(0px, 0px);
 }
 .main-nav {
-  width: auto;
   font-family: 'OpenSans__semiBold', sans-serif;
   display: flex;
   flex-direction: column;
@@ -332,9 +333,6 @@ img {
   margin: 0;
   line-height: 38px;
   letter-spacing: 1px;
-}
-.header__logo {
-  margin-right: 108px;
 }
 .logo--dark {
   color: #343434;
@@ -433,35 +431,42 @@ img {
   margin-bottom: 30px;
 }
 .competitions__list {
-  margin: 0 -15px;
-  padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
+  height: 310px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .competitions__list {
+    margin: 0 -15px;
+  }
 }
 .competitions__item {
   position: relative;
   padding: 0 15px;
+  top: 15px;
+  left: 15px;
 }
-.competitions__item-wrapper {
-  height: 283px;
+.competitions__item::before {
+  content: "";
+  position: absolute;
+  max-width: 270px;
+  max-height: 283px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
-@media (min-width: 768px) {
-  .competitions__item-wrapper {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-  }
-}
-.competitions__picture {
-  width: 100%;
-  height: auto;
-}
 .competitions__wrap {
+  display: flex;
+  flex-direction: column;
   padding-left: 20px;
+  max-width: 250px;
 }
 .competitions__item-list-title {
   font-family: 'Rajdhani_bold', sans-serif;
-  margin-top: 20px;
+  margin-top: 11px;
   margin-bottom: 5px;
   font-size: 20px;
   line-height: 26px;
@@ -479,6 +484,17 @@ img {
   font-size: 20px;
   line-height: 26px;
 }
+.competitions__bottom-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 40px;
+}
+@media (min-width: 768px) {
+  .competitions__bottom-wrap {
+    align-items: baseline;
+  }
+}
 .competitions__item-list-text {
   margin-top: 20px;
   font-size: 14px;
@@ -492,13 +508,10 @@ img {
   }
 }
 .competitions__link {
-  position: absolute;
   padding: 13px 10px;
   background-color: #346CD9;
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  right: 15px;
-  bottom: 0;
 }
 @media (min-width: 768px) {
   .competitions__link {
@@ -605,16 +618,35 @@ img {
 .reviews__wrapper {
   height: 400px;
 }
-.reviews__blockquote {
-  display: inline-block;
-  width: 50%;
-  margin: 0;
+.reviews__wrapper .reviews__item.slick-slide {
+  display: flex;
+  text-align: center;
+  position: relative;
 }
-.reviews__wrapper-img {
-  display: inline-block;
+.reviews__blockquote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-top: 55px;
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .reviews__blockquote {
+    width: 50%;
+    margin-top: 78px;
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .reviews__wrapper-img {
+    display: none;
+  }
 }
 .reviews-text {
-  margin: 7px 120px 20px 120px;
+  width: 400px;
+  margin: 0;
   font-family: 'OpenSans__semiBold', sans-serif;
   color: #343434;
   font-size: 20px;
@@ -624,20 +656,31 @@ img {
   font-family: 'OpenSans__reg', sans-serif;
   font-style: normal;
 }
-.slick-dots {
+.reviews__wrapper .slick-dots {
+  position: absolute;
+  left: 37%;
+  bottom: 70px;
   display: flex;
   list-style: none;
-  margin-top: 30px;
+  margin: 0 -7px;
 }
-.slick-dots li {
-  margin-right: 15px;
+@media (min-width: 768px) {
+  .reviews__wrapper .slick-dots {
+    left: 18.5%;
+  }
 }
-.slick-dots button {
+.reviews__wrapper .slick-dots li {
+  padding: 0 7px;
+}
+.reviews__wrapper .slick-dots button {
   height: 15px;
   width: 15px;
   border: none;
   border-radius: 100%;
   font-size: 0;
+  background-color: rgba(255, 46, 99, 0.33);
+}
+.reviews__wrapper .slick-dots .slick-active button {
   background-color: #FF2E63;
 }
 /* Файл winners.less */
@@ -660,21 +703,29 @@ img {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin: 0 -15px;
+  height: 310px;
   padding: 0;
 }
-.winners__item-wrap {
-  border-radius: 10px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
-  height: 100%;
+@media (min-width: 768px) {
+  .winners__list {
+    margin: 0 -15px;
+  }
 }
 .winners__item {
+  position: relative;
   padding: 0 15px;
-  height: 288px;
+  top: 15px;
+  left: 15px;
 }
-.winners__picture {
+.winners__item::before {
+  content: "";
+  position: absolute;
+  max-width: 270px;
+  max-height: 288px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 .winners__wrap {
   padding-left: 20px;
@@ -689,6 +740,9 @@ img {
 .winners__text {
   font-size: 14px;
   line-height: 19px;
+  margin: 0;
+  margin-top: 7px;
+  margin-bottom: 20px;
 }
 /* Файл footer-page.less */
 .page__footer {
@@ -725,14 +779,6 @@ img {
   }
 }
 /* Файл sliders.less */
-@media (max-width: 768px) {
-  .winners .slick-list,
-  .competitions .slick-list {
-    width: 270px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.1);
-  }
-}
 .slick-arrow {
   position: absolute;
   width: 40px;

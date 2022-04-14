@@ -7,7 +7,7 @@
     padding-top: 10px;
     overflow: auto;
     background-color: @light;
-    z-index: 999999;
+    z-index: 999;
   }
   @media (min-width: @tablet-width) {
     margin-top: 30px;
@@ -22,18 +22,22 @@
 }
 
 .header__container {
-
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
+}
+
+.header__logo {
+  margin-right: 15px;
 }
 
 .popup-wrapper {
   display: flex;
   align-items: center;
+  margin-left: 15px;
    @media (max-width: @tablet-width) {
     position: fixed;
     display: flex;
@@ -57,7 +61,6 @@
 }
 
 .main-nav {
-  width: auto;
   .bold-basic();
   display: flex;
   flex-direction: column;

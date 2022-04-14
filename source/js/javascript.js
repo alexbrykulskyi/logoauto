@@ -9,41 +9,54 @@ $(document).ready(function() {
 
 
 
-  $('.slider-competitions').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: "slick",
-      },
-      {
-        breakpoint: 4000,
-        settings: "unslick"
-      }
-    ]
-  });
+   $('.slider-competitions, .slider-winners').slick({
+      slidesToShow: 1,
+      arrows: true,
+    });
 
-  $('.slider-winners').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: "slick",
-      },
-      {
-        breakpoint: 4000,
-        settings: "unslick"
+    $(function(){
+      resizeSliderContent = false;
+      function resize_slider_content(){
+        if ($(window).width() <= 768 && resizeSliderContent == true) {
+          $('.slider-competitions, .slider-winners').slick({
+            slidesToShow: 1,
+            arrows: true,
+          });
+          resizeSliderContent = false;
+        }
+        else if ($(window).width() <= 900 && resizeSliderContent == true) {
+          $('.slider-competitions, .slider-winners').slick({
+            slidesToShow: 2,
+            arrows: true,
+          });
+          resizeSliderContent = false;
+        }
+        else if ($(window).width() <= 1100 && resizeSliderContent == true) {
+          $('.slider-competitions, .slider-winners').slick({
+            slidesToShow: 3,
+            arrows: true,
+          });
+          resizeSliderContent = false;
+        }
+        else if ($(window).width() > 1100 && resizeSliderContent == false){
+          $('.slider-competitions, .slider-winners').slick('unslick');
+          resizeSliderContent = true;
+        };
       }
-    ]
-  });
+      resize_slider_content();
+      $(window).on('resize', function(){
+          resize_slider_content();
+      });
+    });
 
-   $('.slider-reviews').slick({
-    slidesToShow: 1,
-  slidesToScroll: 1,
-  dots: true,
-  arrows: false,
+
+
+    $(document).ready(function(){
+    $('.slider-reviews').slick({
+      slidesToShow: 1,
+      dots: true,
+      arrows: false,
+  });
   });
 
 });
