@@ -80,6 +80,15 @@ img {
   width: 182px;
   margin-left: 15px;
 }
+@media (max-width: 768px) {
+  .button-wrapper {
+    position: absolute;
+    top: 450px;
+    margin: 0;
+    transform: translate(-215%, 0px);
+    transition: transform 0.5s ease-in-out 0.5s;
+  }
+}
 /*Button popup*/
 .button-toggle {
   display: none;
@@ -111,6 +120,7 @@ img {
 .button-toggle__burger::after {
   content: '';
   display: block;
+  transition: 0.6s;
 }
 .button-toggle__burger::before {
   transform: translateY(-5px);
@@ -187,6 +197,9 @@ img {
   font-size: 16px;
   line-height: 22px;
 }
+.page--noScroll {
+  overflow: hidden;
+}
 .container {
   width: 100%;
   max-width: 360px;
@@ -200,61 +213,43 @@ img {
   }
 }
 /* Файл main-nav.less */
-@media (max-width: 768px) {
-  .page__header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 10px;
-    overflow: auto;
-    background-color: #fff;
-    z-index: 999;
-  }
-}
-@media (min-width: 768px) {
-  .page__header {
-    margin-top: 30px;
-    margin-bottom: 25px;
-  }
-}
-@media (max-width: 768px) {
-  .header--bg {
-    background-color: #FF2E63;
-  }
-}
 @media (min-width: 768px) {
   .header__container {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
-.header__logo {
-  margin-right: 15px;
+@media (max-width: 768px) {
+  .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    transition: 0.6s;
+    overflow: hidden;
+  }
 }
-.popup-wrapper {
-  display: flex;
-  align-items: center;
-  margin-left: 15px;
+@media (max-width: 768px) {
+  .header--bg {
+    background-color: #FF2E63;
+    transition: 0.6s;
+  }
 }
 @media (max-width: 768px) {
   .popup-wrapper {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0px;
-    margin-top: 105px;
-    padding-left: 16px;
-    overflow: auto;
-    transform: translate(0px, -115%);
-    transition: transform 0.3s ease 0s;
+    height: 100vh;
+    top: 100px;
+    transform: translate(-115%, 0px);
+    transition: transform 0.5s ease-in-out 0.5s;
     background-color: #fff;
+    overflow: hidden;
   }
 }
 .popup-open {
@@ -333,15 +328,17 @@ img {
   margin: 0;
   line-height: 38px;
   letter-spacing: 1px;
+  margin-right: 15px;
+}
+.logo__decor {
+  color: #FF2E63;
 }
 .logo--dark {
   color: #343434;
 }
 .logo--light {
   color: #fff;
-}
-.logo__decor {
-  color: #FF2E63;
+  transition: 0.6s;
 }
 /* Файл banner.less */
 .banner__container {
@@ -596,7 +593,7 @@ img {
     width: 40px;
     height: 25px;
     background: url("../img/arrow-right.svg") no-repeat;
-    left: 270px;
+    left: 95%;
     top: 22px;
   }
 }
@@ -627,7 +624,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 90%;
   margin: 0;
   margin-top: 55px;
   gap: 40px;
@@ -762,7 +759,7 @@ img {
   }
 }
 .footer__logo {
-  margin: 16px 0;
+  margin: 16px 15px 16px 0;
 }
 @media (max-width: 768px) {
   .footer__logo {
