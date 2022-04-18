@@ -34,8 +34,9 @@
     position: absolute;
     top: 450px;
     margin: 0;
-    transform: translate(-215%, 0px);
-    transition: transform 0.5s ease-in-out 0.5s;
+    transform: translate(-315%, 0px);
+    transition: transform ease-out 0.9s;
+    z-index: 10;
   }
 }
 
@@ -97,7 +98,7 @@
 
 /*Button styles :hover*/
 
-@media (min-width: @tablet-width) {
+
 
   .button-second::before {
     position: absolute;
@@ -113,11 +114,18 @@
 
   .button-second {
     color: #000;
+    @media (max-width: @tablet-width) {
+    order: -1;
+    }
   }
 
   .button-first {
     position: relative;
     margin-right: 10px;
+    @media (max-width: @tablet-width) {
+     order: 1;
+     margin-right: -20px;
+    }
   }
 
   .button-first::after {
@@ -153,4 +161,4 @@
   .button-lid {
     color: #000;
   }
-}
+

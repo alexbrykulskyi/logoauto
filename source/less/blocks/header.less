@@ -1,9 +1,10 @@
 .page__header {
+  margin-bottom: 100px;
   @media (min-width: @tablet-width) {
     margin-top: 30px;
+    margin-bottom: 36px;
   }
 }
-
 
 .header__container {
   @media (min-width: @tablet-width) {
@@ -15,7 +16,7 @@
   }
 }
 
-.logo-container {
+.header__logoContainer {
   @media (max-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
@@ -35,16 +36,19 @@
   }
 }
 
-.popup-wrapper {
+.navPopupWrapper {
    @media (max-width: @tablet-width) {
     position: absolute;
     width: 100%;
     height: 100vh;
-    top: 100px;
-    transform: translate(-115%, 0px);
-    transition: transform 0.5s ease-in-out 0.5s;
+    padding-top: 46px;
+    top: 58px;
+    left: 0;
+    transform: translateX(-150%);
+    transition: transform ease-out 0.9s;
     background-color: @light;
     overflow: hidden;
+    z-index: 9;
   }
 }
 
@@ -52,7 +56,16 @@
   transform: translate(0px, 0px);
 }
 
-.main-nav {
+.header__navigation {
+  flex-wrap: wrap;
+  @media (max-width: @tablet-width) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-73%);
+  }
+}
+
+.navigation {
   .bold-basic();
   display: flex;
   flex-direction: column;
@@ -65,36 +78,38 @@
     flex-direction: row;
     font-size: 14px;
     line-height: 19px;
+    text-align: center;
   }
 }
 
-.main-nav__item {
+.navigation__item {
   margin-bottom: 30px;
   padding: 0 15px;
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    flex-grow: 1;
   }
 }
 
-.main-nav__link {
+.navigation__link {
   position: relative;
   color: @text-color-basic;
   text-decoration: none;
 }
 
-.main-nav__link--light {
+.navigation__link--light {
   color: @light;
 }
 
 @media (min-width: @tablet-width) {
 
-  .main-nav__link:hover {
+  .navigation__link:hover {
     color: spin(@bright, 180deg);
     transition: color 0.3s;
   }
 
-  .main-nav__link::before,
-  .main-nav__link::after {
+  .navigation__link::before,
+  .navigation__link::after {
     position: absolute;
     left: 0;
     width: 100%;
@@ -105,18 +120,17 @@
     transition: opacity 0.3s, transform 0.3s;
   }
 
-  .main-nav__link::before {
+  .navigation__link::before {
     top: -3px;
     transform: translateY(-10px);
   }
-
-  .main-nav__link::after {
+  .navigation__link::after {
     bottom: -3px;
     transform: translateY(10px);
   }
 
-  .main-nav__link:hover::before,
-  .main-nav__link:hover::after {
+  .navigation__link:hover::before,
+  .navigation__link:hover::after {
     opacity: 1;
     transform: translateY(0px);
   }
