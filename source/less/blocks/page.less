@@ -13,14 +13,28 @@
   overflow: hidden;
 }
 
-.container {
-  width: 100%;
-  max-width: 360px;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
+.page__header {
+  margin-bottom: 100px;
   @media (min-width: @tablet-width) {
-    max-width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 36px;
+  }
+}
+
+.page__reviews {
+  margin-bottom: 60px;
+  background-color: rgba(52, 108, 217, 0.12);
+  @media (min-width: @tablet-width) {
+    margin-bottom: 100px;
+    padding: 0;
+  }
+}
+
+.page__footer {
+  background-color: @bright;
+  @media (max-width: @tablet-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 

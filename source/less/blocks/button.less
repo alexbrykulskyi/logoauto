@@ -24,25 +24,9 @@
   background-color: @bright;
 }
 
-.button-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 182px;
-  margin-left: 15px;
-  @media (max-width: @tablet-width) {
-    position: absolute;
-    top: 450px;
-    margin: 0;
-    transform: translate(-315%, 0px);
-    transition: transform ease-out 0.9s;
-    z-index: 10;
-  }
-}
-
 /*Button popup*/
 
-.button-toggle {
+.buttonToggle {
   display: none;
   @media (max-width: @tablet-width) {
     display: inline-block;
@@ -54,14 +38,14 @@
   }
 }
 
-.button-toggle__burger {
+.buttonToggle__burger {
   margin-top: 11px;
   margin-left: 5px;
 }
 
-.button-toggle__burger,
-.button-toggle__burger::before,
-.button-toggle__burger::after {
+.buttonToggle__burger,
+.buttonToggle__burger::before,
+.buttonToggle__burger::after {
   position: absolute;
   background-color: @light;
   width: 15px;
@@ -69,30 +53,30 @@
   border-radius: 7px;
 }
 
-.button-toggle__burger::before,
-.button-toggle__burger::after {
+.buttonToggle__burger::before,
+.buttonToggle__burger::after {
   content: '';
   display: block;
   transition: 0.6s;
 }
 
-.button-toggle__burger::before {
+.buttonToggle__burger::before {
   transform: translateY(-5px);
 }
 
-.button-toggle__burger::after {
+.buttonToggle__burger::after {
   transform: translateY(5px);
 }
 
-.button--active span {
+.buttonToggle--active span {
   height: 0;
 }
 
-.button--active span::before {
+.buttonToggle--active span::before {
   transform: rotate(45deg);
 }
 
-.button--active span::after{
+.buttonToggle--active span::after{
   transform: rotate(-45deg);
 }
 
@@ -100,26 +84,26 @@
 
 
 
-  .button-second::before {
+  .buttonSecond::before {
     position: absolute;
     content: attr(data-hover);
     color: #fff;
     transition: transform 0.5s, opacity 0.3s;
   }
 
-  .button-second:hover::before {
+  .buttonSecond:hover::before {
     opacity: 0;
     transform: scale(1.1);
   }
 
-  .button-second {
+  .buttonSecond {
     color: #000;
     @media (max-width: @tablet-width) {
     order: -1;
     }
   }
 
-  .button-first {
+  .buttonFirst {
     position: relative;
     margin-right: 10px;
     @media (max-width: @tablet-width) {
@@ -128,7 +112,7 @@
     }
   }
 
-  .button-first::after {
+  .buttonFirst::after {
     position: absolute;
     top: 25px;
     left: 0;
@@ -141,24 +125,24 @@
     transform: translateY(10px);
   }
 
-  .button-first:hover::after {
+  .buttonFirst:hover::after {
     opacity: 1;
     transform: translateY(0);
   }
 
-  .button-lid::before {
+  .buttonLid::before {
     position: absolute;
     content: attr(data-hover);
     color: #fff;
     transition: transform 0.5s, opacity 0.3s;
   }
 
-  .button-lid:hover::before {
+  .buttonLid:hover::before {
     opacity: 0;
     transform: scale(0.9);
   }
 
-  .button-lid {
+  .buttonLid {
     color: #000;
   }
 

@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-  $('.button-toggle').on('click', function(){
-    $('.navPopupWrapper, .button-wrapper').toggleClass('popup-open'),
-    $('.button-toggle').toggleClass('button--active'),
+  $('.buttonToggle').on('click', function(){
+    $('.navPopupWrapper, .buttonWrapper').toggleClass('popup-open'),
+    $('.buttonToggle').toggleClass('buttonToggle--active'),
     $('.page__header, .header__logoContainer').toggleClass('header--bg'),
     $('.logo, .logo__decor').toggleClass('logo--light'),
     $('.page').toggleClass('page--noScroll')

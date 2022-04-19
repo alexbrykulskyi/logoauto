@@ -13,51 +13,11 @@
   margin-top: 0;
 }
 
-.winners__list {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  @media (max-width: @tablet-width) {
-    height: 310px;
-  }
-  @media (min-width: @tablet-width) {
-    margin: 0 -1.25%;
-  }
-}
-
-.winners__item {
-  position: relative;
-  padding: 0 1.25%;
-  top: 15px;
-  @media (min-width: @tablet-width) {
-    top: 0;
-    left: 0;
-  }
-}
-
-.winners__item::before {
-  width: 77%;
-  height: 93%;
-  content: "";
-  position: absolute;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  @media (min-width: @tablet-width) {
-    width: 90%;
-  }
-}
-
-.winners__pictures {
-  width: 100%;
-  height: auto;
-}
-
 .winners__wrap {
   padding-left: 20px;
-  padding-bottom: 20px;
 }
 
-.winners__item-list-title {
+.winners__itemTitle {
   .bold-secondary();
   font-size: 20px;
   line-height: 26px;
