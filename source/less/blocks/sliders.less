@@ -11,11 +11,17 @@
   background: url("../img/slider-arrow-right.svg") center no-repeat;
   top: 50%; transform: translateY(-50%);
   right: -25px;
+  @media (max-width: @mobile-width) {
+    right: -10px;
+  }
 }
 
 .slick-prev {
   background: url("../img/slider-arrow-left.svg") center no-repeat;
   top: 50%; transform: translateY(-50%);
   left: -25px;
+  @media (max-width: @mobile-width) {
+    left: -10px;
+  }
 }
 
