@@ -28,7 +28,7 @@
 
 .buttonToggle {
   display: none;
-  @media (max-width: @tablet-width) {
+  @media (max-width: @desktop-width) {
     display: inline-block;
     position: relative;
     width: 25px;
@@ -82,67 +82,65 @@
 
 /*Button styles :hover*/
 
+.buttonSecond::before {
+  position: absolute;
+  content: attr(data-hover);
+  color: #fff;
+  transition: transform 0.5s, opacity 0.3s;
+}
 
+.buttonSecond:hover::before {
+  opacity: 0;
+  transform: scale(1.1);
+}
 
-  .buttonSecond::before {
-    position: absolute;
-    content: attr(data-hover);
-    color: #fff;
-    transition: transform 0.5s, opacity 0.3s;
+.buttonSecond {
+  color: #000;
+  @media (max-width: @tablet-width) {
+  order: -1;
   }
+}
 
-  .buttonSecond:hover::before {
-    opacity: 0;
-    transform: scale(1.1);
+.buttonFirst {
+  position: relative;
+  margin-right: 10px;
+  @media (max-width: @tablet-width) {
+   order: 1;
+   margin-right: -20px;
   }
+}
 
-  .buttonSecond {
-    color: #000;
-    @media (max-width: @tablet-width) {
-    order: -1;
-    }
-  }
+.buttonFirst::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+}
 
-  .buttonFirst {
-    position: relative;
-    margin-right: 10px;
-    @media (max-width: @tablet-width) {
-     order: 1;
-     margin-right: -20px;
-    }
-  }
+.buttonFirst:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .buttonFirst::after {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-    content: '';
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateY(10px);
-  }
+.buttonLid::before {
+  position: absolute;
+  content: attr(data-hover);
+  color: #fff;
+  transition: transform 0.5s, opacity 0.3s;
+}
 
-  .buttonFirst:hover::after {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.buttonLid:hover::before {
+  opacity: 0;
+  transform: scale(0.9);
+}
 
-  .buttonLid::before {
-    position: absolute;
-    content: attr(data-hover);
-    color: #fff;
-    transition: transform 0.5s, opacity 0.3s;
-  }
-
-  .buttonLid:hover::before {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  .buttonLid {
-    color: #000;
-  }
+.buttonLid {
+  color: #000;
+}
 

@@ -1,5 +1,8 @@
-.footer__container{
-  @media (min-width: @tablet-width) {
+.footer__container {
+  @media (max-width: @desktop-width) {
+    margin: 0 auto;
+  }
+  @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,17 +10,21 @@
 }
 
 .footer__logo {
-  margin: 16px 15px 16px 0;
-  @media (max-width: @tablet-width) {
-  margin: 0;
+  @media (min-width: @desktop-width) {
+    margin: 16px 15px 16px 0;
   }
 }
 
 .footer__navigation {
-  font-size: 14px;
-  line-height: 19px;
-  @media (max-width: @tablet-width) {
+  @media (max-width: @desktop-width) {
     margin-top: 30px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
 

@@ -1,5 +1,5 @@
 img {
-  widht: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -23,6 +23,9 @@ img {
   padding: 0 15px;
   box-sizing: border-box;
   @media (min-width: @tablet-width) {
+    max-width: 768px;
+  }
+  @media (min-width: @desktop-width) {
     max-width: 1200px;
   }
 }
